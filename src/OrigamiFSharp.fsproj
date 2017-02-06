@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="WorldCursor.fs" />
+    <Compile Include="GazeGestureManager.fs" />
+    <Compile Include="SphereCommands.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
