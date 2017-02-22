@@ -4,7 +4,7 @@ class Autobuild {
 
     static function Build() {
         // Get filename.
-        var path = "E:/holodevelop/Origami/App";
+        var path = "C:/Users/psfblair/Documents/holodevelop/MicrosoftAcademy/101-Origami/App";
         var levels : String[] = [ "Assets/Origami.unity" ];
         
         // Build player.
