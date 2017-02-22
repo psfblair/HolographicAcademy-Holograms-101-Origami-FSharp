@@ -38,3 +38,6 @@ obj/
 *.opendb
 WSATestCertificate.pfx
 WSATestCertificate.pfx.meta
+
+# macOS
+# .DS_Store
