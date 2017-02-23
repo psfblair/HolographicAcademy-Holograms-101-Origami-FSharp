@@ -27,21 +27,13 @@ Target "Build" (fun _ ->
     |> Log "AppBuild-Output: "
 )
 
-let sshDestination = "psfblair@holodevelop:/C:/Users/psfblair/Documents/holodevelop/MicrosoftAcademy/101-Origami/Assets/Plugins/"
-let privateKeyPath = "~/.ssh/holodevelop"
-
-let copyToRemoteProject localDll = 
-    SCP (fun p -> { p with PrivateKeyPath = privateKeyPath; ToolPath = "scpq"}) localDll sshDestination
+let remoteProjectPath = "/Users/paulblair/Documents/workspaces-Unity/remote/psfblair/Documents/holodevelop/MicrosoftAcademy/101-Origami"
 
 Target "Deploy" (fun _ ->
     let origamiDll = buildDir + "Origami.dll"
     let fsharpDll = buildDir + "FSharp.Core.dll"
-    Copy "../Assets/Plugins" [ origamiDll; fsharpDll ]
-    try
-        copyToRemoteProject origamiDll
-        copyToRemoteProject fsharpDll
-    with
-        | _ -> eprintfn "Unable to copy to remote host."
+    FileHelper.Copy "../Assets/Plugins" [ origamiDll; fsharpDll ]
+    FileHelper.Copy (remoteProjectPath + "/Assets/Plugins") [ origamiDll; fsharpDll ]
 )
 
 // Build order

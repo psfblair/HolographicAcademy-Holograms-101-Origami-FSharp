@@ -1,0 +1,1 @@
+ssh psfblair@holodevelop "cd C:\Users\psfblair\Documents\holodevelop\MicrosoftAcademy\101-Origami && unity_headless_build.bat && msbuild_headless.bat"
