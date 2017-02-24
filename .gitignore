@@ -40,4 +40,4 @@ WSATestCertificate.pfx
 WSATestCertificate.pfx.meta
 
 # macOS
-# .DS_Store
+.DS_Store
