@@ -21,13 +21,8 @@
       <CustomCommands>
         <Command>
           <type>AfterBuild</type>
-          <command>cp "${TargetFile}" ../Assets/Plugins</command>
-          <workingdir>${SolutionDir}</workingdir>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp "${TargetDir}/FSharp.Core.dll" ../Assets/Plugins</command>
-          <workingdir>${SolutionDir}</workingdir>
+          <command>./copy_post_build.sh "${TargetDir}" "${TargetFile}"</command>
+          <workingdir>${SolutionDir}${ProjectDir}</workingdir>
         </Command>
       </CustomCommands>
     </CustomCommands>
