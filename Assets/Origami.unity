@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4501133, g: 0.50015545, b: 0.5754585, a: 1}
+  m_IndirectSpecularColor: {r: 0.45002407, g: 0.5000726, b: 0.5753663, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 168679419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 2025291720, guid: 0dbe04a40eabf794fb3d874d22f79dc2, type: 3}
+  m_Script: {fileID: 2025291720, guid: 50032e7d3dbe2448eb8392811938c801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &181078462 stripped
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1106280453}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 2025291720, guid: 0dbe04a40eabf794fb3d874d22f79dc2, type: 3}
+  m_Script: {fileID: 2025291720, guid: 50032e7d3dbe2448eb8392811938c801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1227554516
@@ -456,10 +456,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1339015626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1889086379, guid: 0dbe04a40eabf794fb3d874d22f79dc2, type: 3}
+  m_Script: {fileID: -1889086379, guid: 50032e7d3dbe2448eb8392811938c801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshRenderer: {fileID: 0}
 --- !u!4 &1390718297 stripped
 Transform:
   m_PrefabParentObject: {fileID: 418686, guid: c601cf4818fdef646a77291c9923ef3f, type: 2}
@@ -476,7 +475,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1577463922}
-  - component: {fileID: 1577463923}
+  - component: {fileID: 1577463925}
+  - component: {fileID: 1577463924}
   m_Layer: 0
   m_Name: OrigamiCollection
   m_TagString: Untagged
@@ -501,7 +501,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1577463923
+--- !u!114 &1577463924
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -509,6 +509,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1577463921}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1963927540, guid: 0dbe04a40eabf794fb3d874d22f79dc2, type: 3}
+  m_Script: {fileID: -264277273, guid: 50032e7d3dbe2448eb8392811938c801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1577463925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1577463921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1963927540, guid: 50032e7d3dbe2448eb8392811938c801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
