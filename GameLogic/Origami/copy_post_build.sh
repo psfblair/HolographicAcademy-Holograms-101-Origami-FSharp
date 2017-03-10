@@ -3,7 +3,7 @@
 TARGET_DIR="$1"
 TARGET_FILE="$2"
 
-MY_DIR=`dirname $0`
+MY_DIR=`dirname "$0"`
 LOCAL_PLUGINS_DIR="$MY_DIR/../../Assets/Plugins"
 
 cp -v "$TARGET_FILE" "$LOCAL_PLUGINS_DIR"
