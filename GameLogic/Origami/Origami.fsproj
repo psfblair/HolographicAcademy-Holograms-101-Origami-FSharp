@@ -22,7 +22,7 @@
         <Command>
           <type>AfterBuild</type>
           <command>./copy_post_build.sh "${TargetDir}" "${TargetFile}"</command>
-          <workingdir>${SolutionDir}${ProjectDir}</workingdir>
+          <workingdir>${ProjectDir}</workingdir>
         </Command>
       </CustomCommands>
     </CustomCommands>
