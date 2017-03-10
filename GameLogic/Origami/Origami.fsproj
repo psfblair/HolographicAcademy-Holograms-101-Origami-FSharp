@@ -65,6 +65,7 @@
     <Compile Include="WorldCursor.fs" />
     <Compile Include="SphereSounds.fs" />
     <Compile Include="TapToPlaceParent.fs" />
+    <Compile Include="HitTarget.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Assembly-CSharp.csproj">

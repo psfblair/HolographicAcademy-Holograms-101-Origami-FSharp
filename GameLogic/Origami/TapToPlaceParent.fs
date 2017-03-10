@@ -45,3 +45,7 @@ type TapToPlaceParent() =
 
 // GOTCHA - "the namespace or module SpatialMapping is not defined"
 // to get SpatialMapping module have to add Assembly-CSharp to solution
+
+// If SpatialMapping still doesn't resolve
+// 1. Check that both projects target Mono/.NET 3.5
+// 2. If you're using Xamarin Studio, try closing/reopenint it.
