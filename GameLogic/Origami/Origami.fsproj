@@ -65,11 +65,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <None Include="packages.config" />
     <Compile Include="GazeGestureManager.fs" />
     <Compile Include="SpeechManager.fs" />
     <Compile Include="SphereCommands.fs" />
     <Compile Include="WorldCursor.fs" />
+    <Compile Include="SphereSounds.fs" />
   </ItemGroup>
   <Import Project="$(FSharpTargetsPath)" />
 </Project>
