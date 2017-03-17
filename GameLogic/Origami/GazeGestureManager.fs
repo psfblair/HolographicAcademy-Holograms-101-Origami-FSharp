@@ -14,9 +14,8 @@ type GazeGestureManager() =
 
     let mutable maybeRecognizer: Option<GestureRecognizer> = None
 
-    let setGestureRecognizer = 
-        // Set up a GestureRecognizer to detect Select gestures.
-        let recognizer = new GestureRecognizer()
+    let setGestureRecognizer (recognizer: GestureRecognizer) = 
+        // Set up the GestureRecognizer to detect Select gestures.
         recognizer.add_TappedEvent(
             fun source tapCount ray ->
                 // Send an OnSelect message to the focused object and its ancestors.
@@ -26,13 +25,9 @@ type GazeGestureManager() =
         )
         recognizer.StartCapturingGestures()
         maybeRecognizer <- Some(recognizer)
-        recognizer
+        ()
         
-    let resetRecognizer() = 
-        let recognizer = 
-            match maybeRecognizer with
-                | Some(recognzr) -> recognzr
-                | None -> setGestureRecognizer
+    let resetRecognizer (recognizer: GestureRecognizer) = 
         recognizer.CancelGestures()
         recognizer.StartCapturingGestures()
 
@@ -42,7 +37,7 @@ type GazeGestureManager() =
 
     member this.Start() =
         instance <- Some(this)
-        setGestureRecognizer
+        new GestureRecognizer() |> setGestureRecognizer
 
     // Update is called once per frame
     member this.Update() =
@@ -60,4 +55,6 @@ type GazeGestureManager() =
         // If the focused object changed this frame, start detecting fresh gestures again.
         if maybeNewFocusedObject <> maybeFocusedObject then
             maybeFocusedObject <- maybeNewFocusedObject
-            resetRecognizer()
+            match maybeRecognizer with
+                | Some(recognzr) -> resetRecognizer recognzr
+                | None -> new GestureRecognizer() |> setGestureRecognizer
