@@ -48,4 +48,4 @@ type TapToPlaceParent() =
 
 // If SpatialMapping still doesn't resolve
 // 1. Check that both projects target Mono/.NET 3.5
-// 2. If you're using Xamarin Studio, try closing/reopenint it.
+// 2. If you're using Xamarin Studio, try closing/reopening it.
